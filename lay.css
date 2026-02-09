@@ -1,0 +1,134 @@
+/*
+    Version: V4
+    Last Modified: 2026-01-14
+    File Name: lay.css
+    Theme: ANDAR - Aroma & Spa (Deep Green & Earthy)
+*/
+
+:root {
+    /* [ANDAR Brand Colors] */
+    --damso-color-primary: #2C3E30;
+    /* Dark Green (Headings) */
+    --damso-color-secondary: #5F6F65;
+    /* Sage Green (Subtitles) */
+    --damso-color-accent: #9A8C74;
+    /* Earthy Beige/Gold (Buttons/Links) */
+    --damso-color-bg: #F9F8F6;
+    /* Off-White (Background) */
+    --damso-color-surface: #FFFFFF;
+    /* White (Card BG) */
+    --damso-color-text: #4A4A4A;
+    /* Dark Grey (Body Text) */
+    /* Beige Border */
+    --damso-card-border: #E5E0D8;
+
+    /* [UI Overrides] */
+    --bg-navbar-animated: linear-gradient(135deg, rgba(249, 248, 246, 0.95), rgba(255, 255, 255, 0.95));
+    --bg-card: #FFFFFF;
+    --damso-bg-button: #2C3E30;
+    --damso-bg-button-hover: #3E5244;
+
+    --bg-lang-switcher: #E5E0D8;
+    --bg-lang-switcher-hover: #D6D0C5;
+    --bg-lang-switcher-active: #2C3E30;
+
+    --bg-offer-badge: #9A8C74;
+    --bg-overlay: rgba(93, 64, 55, 0.05);
+
+    --text-headings: #2C3E30;
+    --text-secondary: #5F6F65;
+    --text-accent: #9A8C74;
+
+    --text-navbar: #2C3E30;
+    --text-lang-switcher: #5F6F65;
+    --text-lang-switcher-active: #FFFFFF;
+    --damso-text-button: #FFFFFF;
+    --text-section-title-icon: #9A8C74;
+    --text-header-title: #FFFFFF;
+    --text-header-description: #F0F0F0;
+    --text-footer: #888888;
+    --text-offer-badge: #FFFFFF;
+
+    --bg-footer: #2C3E30;
+    --border-card: #E5E0D8;
+    --border-navbar-bottom: rgba(44, 62, 48, 0.1);
+    --border-section-heading-underline: #9A8C74;
+}
+
+[data-theme="dark"] {
+    --damso-color-primary: #E0E5E1;
+    --damso-color-secondary: #A0AFA5;
+    --damso-color-accent: #C5BBA4;
+    --damso-color-bg: #1A1F1C;
+    --damso-color-surface: #252B27;
+    --damso-color-text: #D0D0D0;
+    --damso-color-border: #3A423D;
+
+    --damso-bg-button: #A0AFA5;
+    --damso-card-border: #3A423D;
+}
+
+/* Typography & Layout Overrides */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+/* Fonts: Logos only get custom font */
+.home-logo {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 2rem + 6vw, 6rem);
+    color: #FFFFFF;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.damso-header__description {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.damso-nav__logo {
+    letter-spacing: 2px;
+}
+
+/* UI Overrides */
+.damso-button,
+.damso-form__submit {
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 40px;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.damso-button:hover,
+.damso-form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* [Extracted Styles] */
+.andar-interview-grid {
+    margin-bottom: 30px;
+}
+
+.andar-video-wrapper {
+    height: auto;
+    min-height: 300px;
+}
+
+.andar-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.damso-card__tag--center {
+    align-self: center;
+}

@@ -1,0 +1,439 @@
+<!--
+    Version: V4
+    Framework: Damso V4
+    Project: ANDAR - Aroma & Spa
+    Last Modified: 2026-01-14
+    License: © 2026 Damso. All Rights Reserved.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Metadata -->
+    <title data-lang="meta_title">안다르 - 아로마 & 스파</title>
+    <meta name="description" data-lang="meta_description"
+        content="온전한 휴식과 치유의 공간. 안다르 아로마 & 스파는 자연의 향기와 전문가의 손길로 지친 몸과 마음에 깊은 평온을 선사합니다.">
+    <meta name="keywords" content="아로마테라피, 스파, 마사지, 힐링, 웰니스, 릴렉세이션, 안다르, ANDAR">
+    <link rel="canonical" href="https://www.andar.kr/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" data-lang="home_title" content="안다르 - 아로마 & 스파">
+    <meta property="og:description" data-lang="meta_description"
+        content="온전한 휴식과 치유의 공간. 안다르 아로마 & 스파는 자연의 향기와 전문가의 손길로 지친 몸과 마음에 깊은 평온을 선사합니다.">
+    <meta property="og:image" content="./section/home/1.jpg">
+
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!-- Fonts: Noto Sans KR (Body) & Cormorant Garamond (Titles - Spa Vibe) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Damso V4 Core -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/core/core.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/core/core.js"></script>
+
+    <!-- Damso V4 View: Page -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/view/page.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/view/page.js"></script>
+
+    <!-- Damso V4 Plug: Canvas -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/plug/canvas/canvas.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/plug/canvas/canvas.js"></script>
+
+    <!-- Tier 3: Interior (User Custom) -->
+    <link rel="stylesheet" href="./lay.css">
+    <script src="./lay.js" defer></script>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="damso-nav">
+        <div class="damso-nav__container">
+            <a href="#home" class="damso-nav__logo" data-lang="home_title">ANDAR</a>
+            <div class="damso-nav__buttons">
+                <div id="lang-switcher">
+                    <button data-lang-set="ko" class="active">KO</button>
+                    <button data-lang-set="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="damso-header">
+        <div class="damso-header__content js-parallax-content">
+            <h1 class="damso-header__title home-logo">ANDAR</h1>
+            <p class="damso-header__description" data-lang="home_description">자연의 숨결 속, 진정한 나를 만나는 시간</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="overview" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2>
+                    <span translate="no" class="material-symbols-outlined notranslate">spa</span>
+                    <span data-lang="overview_title">소개</span>
+                </h2>
+                <p class="damso-section__description" data-lang="overview_desc"></p>
+                <div class="damso-grid damso-grid--cols-2">
+                    <div class="damso-card">
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="overview_01_title"></h3>
+                            <p class="damso-card__description" data-lang="overview_01_desc"></p>
+                        </div>
+                    </div>
+                    <div class="damso-card">
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="overview_02_title"></h3>
+                            <p class="damso-card__description" data-lang="overview_02_desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">self_improvement</span><span
+                        data-lang="services_title"></span></h2>
+                <p class="damso-section__description" data-lang="services_desc"></p>
+
+                <div class="damso-grid damso-grid--cols-3">
+
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger"><img src="./section/services/01.jpg"
+                                alt="Service 01" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="services_01_title"></h3>
+                            <p class="damso-card__description" data-lang="services_01_desc"></p>
+                            <div class="damso-product-list" data-content-type="product" data-prefix="services_01_detail"
+                                data-dynamic-area></div>
+                        </div>
+                        <div class="damso-price-info">
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="services_01_price_1_label"></span>
+                                <span class="damso-price-info__value" data-lang="services_01_price_1_value"></span>
+                            </div>
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="services_01_price_2_label"></span>
+                                <span class="damso-price-info__value" data-lang="services_01_price_2_value"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger"><img src="./section/services/02.jpg"
+                                alt="Service 02" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="services_02_title"></h3>
+                            <p class="damso-card__description" data-lang="services_02_desc"></p>
+                            <div class="damso-product-list" data-content-type="product" data-prefix="services_02_detail"
+                                data-dynamic-area></div>
+                        </div>
+                        <div class="damso-price-info">
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="services_02_price_1_label"></span>
+                                <span class="damso-price-info__value" data-lang="services_02_price_1_value"></span>
+                            </div>
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="services_02_price_2_label"></span>
+                                <span class="damso-price-info__value" data-lang="services_02_price_2_value"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger"><img src="./section/services/03.jpg"
+                                alt="Service 03" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="services_03_title"></h3>
+                            <p class="damso-card__description" data-lang="services_03_desc"></p>
+                            <div class="damso-product-list" data-content-type="product" data-prefix="services_03_detail"
+                                data-dynamic-area></div>
+                        </div>
+                        <div class="damso-price-info">
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="services_03_price_1_label"></span>
+                                <span class="damso-price-info__value" data-lang="services_03_price_1_value"></span>
+                            </div>
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="services_03_price_2_label"></span>
+                                <span class="damso-price-info__value" data-lang="services_03_price_2_value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="damso-faq-container">
+                    <h3 class="damso-faq-title" data-lang="faq_title">FAQ</h3>
+                    <div class="damso-faq-list" data-content-type="faq" data-prefix="services_faq_item"
+                        data-dynamic-area>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="products" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">soap</span><span
+                        data-lang="products_title"></span></h2>
+                <p class="damso-section__description" data-lang="products_desc"></p>
+
+                <div class="damso-grid damso-grid--cols-3">
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger"><img src="./section/products/01.jpg"
+                                alt="Product 01" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="products_01_title"></h3>
+                            <p class="damso-card__description" data-lang="products_01_desc"></p>
+                            <div class="damso-product-list" data-content-type="product" data-prefix="products_01_detail"
+                                data-dynamic-area></div>
+                        </div>
+                        <div class="damso-price-info">
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="products_01_price_1_label"></span>
+                                <span class="damso-price-info__value" data-lang="products_01_price_1_value"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger"><img src="./section/products/02.jpg"
+                                alt="Product 02" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="products_02_title"></h3>
+                            <p class="damso-card__description" data-lang="products_02_desc"></p>
+                            <div class="damso-product-list" data-content-type="product" data-prefix="products_02_detail"
+                                data-dynamic-area></div>
+                        </div>
+                        <div class="damso-price-info">
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="products_02_price_1_label"></span>
+                                <span class="damso-price-info__value" data-lang="products_02_price_1_value"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger"><img src="./section/products/03.jpg"
+                                alt="Product 03" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="products_03_title"></h3>
+                            <p class="damso-card__description" data-lang="products_03_desc"></p>
+                            <div class="damso-product-list" data-content-type="product" data-prefix="products_03_detail"
+                                data-dynamic-area></div>
+                        </div>
+                        <div class="damso-price-info">
+                            <div class="damso-price-info__item">
+                                <span class="damso-price-info__label" data-lang="products_03_price_1_label"></span>
+                                <span class="damso-price-info__value" data-lang="products_03_price_1_value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="damso-faq-container">
+                    <h3 class="damso-faq-title" data-lang="faq_title">FAQ</h3>
+                    <div class="damso-faq-list" data-content-type="faq" data-prefix="products_faq_item"
+                        data-dynamic-area>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="promotion" class="damso-section">
+            <div class="damso-section--parallax damso-dotted"
+                style="background-image: url('./section/promotion/bg.webp');">
+            </div>
+            <div class="damso-container js-fade-in">
+                <div class="damso-grid damso-grid--cols-1">
+                    <div class="damso-card damso-card--horizontal">
+                        <div class="damso-card__image-wrapper">
+                            <img src="./section/promotion/01.jpg" alt="Promotion" class="damso-card__image">
+                        </div>
+                        <div class="damso-card__content">
+                            <span class="damso-card__tag" data-lang="promotion_tag_discount"></span>
+                            <h3 class="damso-card__title" data-lang="promotion_01_title"></h3>
+                            <p class="damso-card__description" data-lang="promotion_01_desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="interviews" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">format_quote</span><span
+                        data-lang="interviews_title"></span></h2>
+                <p class="damso-section__description" data-lang="interviews_desc"></p>
+
+                <!-- CEO Interview (Full Width, Standard Card) -->
+                <div class="damso-grid damso-grid--cols-1 andar-interview-grid">
+                    <div class="damso-card">
+                        <!-- Video without wrapper for full control or consistent height -->
+                        <div class="damso-card__image-wrapper andar-video-wrapper">
+                            <video class="damso-card__video andar-video" controls poster="./section/interviews/ceo.jpg">
+                                <source src="./section/interviews/ceo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Interviews (2 Columns) -->
+                <div class="damso-grid damso-grid--cols-2">
+                    <!-- Client 01 -->
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger">
+                            <span class="damso-card__tag damso-card__tag--overlay" data-lang="interview_01_job"></span>
+                            <img src="./section/interviews/01.jpg" alt="Interviewee 01" class="damso-card__image">
+                        </div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="interview_01_name"></h3>
+                            <audio controls>
+                                <source src="./section/interviews/01.mp4" type="audio/mp4">
+                            </audio>
+                            <p class="damso-card__description damso-card__comment" data-lang="interview_01_script"></p>
+                        </div>
+                    </div>
+
+                    <!-- Client 02 -->
+                    <div class="damso-card">
+                        <div class="damso-card__image-wrapper js-lightbox-trigger">
+                            <span class="damso-card__tag damso-card__tag--overlay" data-lang="interview_02_job"></span>
+                            <img src="./section/interviews/02.jpg" alt="Interviewee 02" class="damso-card__image">
+                        </div>
+                        <div class="damso-card__content">
+                            <h3 class="damso-card__title" data-lang="interview_02_name"></h3>
+                            <audio controls>
+                                <source src="./section/interviews/02.mp4" type="audio/mp4">
+                            </audio>
+                            <p class="damso-card__description damso-card__comment" data-lang="interview_02_script"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="location" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">location_on</span><span
+                        data-lang="section_location_title"></span></h2>
+                <p class="damso-section__description" data-lang="section_location_desc_reservation"></p>
+                <div class="damso-card">
+                    <!-- Google Map Embed Placeholder -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.689154412275!2d-118.2562447889396!3d34.05199927304996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64848905333%3A0x4549452dfa14a635!2sU.S.%20Bank%20Tower!5e0!3m2!1sko!2skr!4v1719957863588!5m2!1sko!2skr"
+                        width="100%" height="450" class="damso-card__map" style="border:0;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="damso-address-block">
+                    <p data-lang="address_text"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="profile" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">contact_mail</span><span
+                        data-lang="section_profile_title"></span></h2>
+                <p class="damso-section__description" data-lang="section_profile_desc"></p>
+
+                <div class="damso-profile-list">
+                    <div class="damso-profile-list__item">
+                        <strong class="damso-profile-list__label" data-lang="form_label_name"></strong>
+                        <span class="damso-profile-list__value" data-lang="rep_name"></span>
+                    </div>
+                    <div class="damso-profile-list__item">
+                        <strong class="damso-profile-list__label" data-lang="form_label_email"></strong>
+                        <a href="mailto:andar@example.com" class="damso-profile-list__value" data-lang="email_address"
+                            data-lang-href="email_href"></a>
+                    </div>
+                    <div class="damso-profile-list__item">
+                        <strong class="damso-profile-list__label" data-lang="sns_label_instagram"></strong>
+                        <a href="#" class="damso-profile-list__value" data-demo-link="true">@andar_official</a>
+                    </div>
+                    <div class="damso-profile-list__item">
+                        <strong class="damso-profile-list__label" data-lang="sns_label_youtube"></strong>
+                        <a href="#" class="damso-profile-list__value" data-demo-link="true">ANDAR TV</a>
+                    </div>
+                </div>
+                <div class="damso-button-group">
+                    <a href="#" class="damso-btn" data-lang-href="profile_button_url" rel="noopener noreferrer">
+                        <span data-lang="btn_reservation"></span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2>
+                    <span translate="no" class="material-symbols-outlined notranslate">mail</span>
+                    <span data-lang="section_contact_title"></span>
+                </h2>
+                <p class="damso-section__description" data-lang="section_contact_desc"></p>
+
+                <form class="damso-form damso-contact-form" autocomplete="off" data-demo-mode="true">
+                    <input type="email" name="email" required class="damso-form__input"
+                        data-lang-placeholder="form_placeholder_email" placeholder="Email">
+                    <div class="damso-form__textarea-wrapper">
+                        <textarea name="message" rows="5" required maxlength="5000" class="damso-form__textarea"
+                            data-lang-placeholder="form_placeholder_msg" placeholder="Message"></textarea>
+                    </div>
+                    <input type="hidden" name="form" value="andar">
+                    <button type="submit" class="damso-btn">
+                        <span class="damso-form__text" data-lang="btn_submit">보내기</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section id="search" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2>
+                    <span translate="no" class="material-symbols-outlined notranslate">search</span>
+                    <span data-lang="section_search_title"></span>
+                </h2>
+                <p class="damso-section__description" data-lang="section_search_desc"></p>
+
+                <form class="damso-form damso-search-form" autocomplete="off" data-demo-mode="true">
+                    <input type="text" name="key" required class="damso-form__input"
+                        data-lang-placeholder="form_placeholder_search" placeholder="Search...">
+                    <input type="hidden" name="form" value="andar">
+                    <button type="submit" class="damso-btn">
+                        <span class="damso-form__text" data-lang="btn_search">검색</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="damso-footer">
+        <div class="damso-container">
+            <p class="render-as-html" data-lang="ui_copyright_text"></p>
+            <p><a data-lang-href="ui_footer_credit_url" rel="noopener noreferrer"
+                    data-lang="ui_footer_credit_text">Powered by Damso</a></p>
+        </div>
+    </footer>
+
+    <!-- To Top Button -->
+    <a href="#home" id="to-top-btn" class="hidden">
+        <span translate="no" class="material-symbols-outlined notranslate">arrow_upward</span>
+    </a>
+</body>
+
+</html>

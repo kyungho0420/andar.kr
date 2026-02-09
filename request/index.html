@@ -1,0 +1,177 @@
+<!--
+    Version: Damso Express V4 (Refactor)
+    Project Name: ANDAR SPA RESERVATION
+    Last Modified: 2026-01-03
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Andar Aroma Spa</title>
+
+    <meta property="og:image" content="https://www.andar.kr/section/home/1.jpg">
+    <link rel="icon" href="https://www.andar.kr/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- [Tier 1] Damso Core -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/core/core.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/core/core.js"></script>
+
+    <!-- [Tier 2] Damso View: Form -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/v4/view/form.css">
+    <script src="https://cdn.dam.so/_inc/express/v4/view/form.js"></script>
+
+    <!-- [Tier 3] User Custom -->
+    <link rel="stylesheet" href="./lay.css">
+    <script src="./lay.js" defer></script>
+</head>
+
+<body>
+
+    <div class="pv-app">
+        <div class="pv-container">
+            <header class="pv-header">
+                <h1 class="pv-header__title" data-lang="home_title"></h1>
+                <p class="pv-header__description" data-lang="home_description"></p>
+
+                <nav class="pv-lang-switcher">
+                    <a href="?lang=ko" class="pv-lang-btn">KO</a>
+                    <a href="?lang=en" class="pv-lang-btn">EN</a>
+                </nav>
+            </header>
+
+            <form id="application-form" class="pv-form" novalidate>
+                <input type="hidden" name="form" value="andar">
+
+                <!-- 1. Applicant Info -->
+                <div class="pv-card">
+                    <div class="pv-card__header">
+                        <h2 data-lang="applicant_info_title"></h2>
+                    </div>
+
+                    <div class="pv-group">
+                        <label class="pv-label" for="applicant_name" data-lang="applicant_name"></label>
+                        <input class="pv-input" id="applicant_name" name="applicant_name" type="text" required>
+                    </div>
+                    <div class="pv-group">
+                        <label class="pv-label" for="applicant_contact" data-lang="applicant_contact"></label>
+                        <input class="pv-input" id="applicant_contact" name="applicant_contact" type="tel" required>
+                    </div>
+
+                    <!-- Gender & Birth -->
+                    <div class="site-row-datetime">
+                        <div class="pv-group">
+                            <label class="pv-label" data-lang="applicant_gender">성별</label>
+                            <div class="site-segmented-control">
+                                <input type="radio" id="app_gen_m" name="applicant_gender" value="M" checked>
+                                <label for="app_gen_m" data-lang="label_male">남</label>
+
+                                <input type="radio" id="app_gen_f" name="applicant_gender" value="F">
+                                <label for="app_gen_f" data-lang="label_female">여</label>
+                            </div>
+                        </div>
+
+                        <div class="pv-group">
+                            <label class="pv-label" data-lang="applicant_birth">출생년도</label>
+                            <select class="pv-select js-birth-year" name="applicant_birth_year">
+                                <!-- Options populated by lay.js -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Visitor Info -->
+                <div class="pv-card">
+                    <div class="pv-card__header">
+                        <h2 data-lang="visitor_info_title"></h2>
+                    </div>
+
+                    <div class="pv-group">
+                        <label class="pv-label" data-lang="visitor_count"></label>
+                        <div class="site-segmented-control">
+                            <input type="radio" id="visitor_count_1" name="visitor_count" value="1" checked>
+                            <label for="visitor_count_1" data-lang="visitor_count_one"></label>
+
+                            <input type="radio" id="visitor_count_2" name="visitor_count" value="2">
+                            <label for="visitor_count_2" data-lang="visitor_count_two"></label>
+
+                            <input type="radio" id="visitor_count_3" name="visitor_count" value="3">
+                            <label for="visitor_count_3" data-lang="visitor_count_three"></label>
+                        </div>
+                        <p class="pv-note" data-lang="visitor_note"></p>
+                    </div>
+
+                    <div id="visitor-details-container"></div>
+                </div>
+
+                <!-- 3. Service Selection -->
+                <div class="pv-card">
+                    <div class="pv-card__header">
+                        <h2 data-lang="service_selection_title"></h2>
+                    </div>
+
+                    <p class="pv-note" style="margin-top:-0.5rem; margin-bottom:1.5rem;" data-lang="services_desc"></p>
+
+                    <div class="pv-group">
+                        <label class="pv-label" data-lang="program"></label>
+                        <select name="service" id="service" class="pv-select" required>
+                            <option value="" data-lang="program_select"></option>
+                            <option value="aroma_signature" data-lang="services_01_title"></option>
+                            <option value="deep_tissue" data-lang="services_02_title"></option>
+                            <option value="serenity_facial" data-lang="services_03_title"></option>
+                        </select>
+                    </div>
+
+                    <div class="pv-group">
+                        <label class="pv-label" data-lang="reservation_datetime"></label>
+                        <div class="site-row-datetime">
+                            <div class="date-time-wrapper">
+                                <input class="pv-input" id="reservation_date" name="reservation_date" type="date"
+                                    required>
+                            </div>
+                            <select class="pv-select" id="reservation_hour" name="reservation_hour" required>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Additional Requests -->
+                <div class="pv-card">
+                    <div class="pv-card__header">
+                        <h2 data-lang="additional_requests_title"></h2>
+                    </div>
+                    <textarea class="pv-textarea" name="requests" rows="5"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="pv-submit-area">
+                    <button type="submit" class="pv-btn pv-btn--submit pv-btn--full" id="submit-btn">
+                        <span class="submit-btn-text" data-lang="submit_button"></span>
+                    </button>
+                </div>
+            </form>
+
+            <footer class="pv-footer">
+                <p>&copy; 2026 ANDAR. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
