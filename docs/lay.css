@@ -75,13 +75,12 @@ body {
 }
 
 /* Fonts: Logos only get custom font */
-.home-logo {
+.damso-header__title {
     font-family: 'Cormorant Garamond', serif !important;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-size: clamp(3rem, 2rem + 6vw, 6rem);
-    color: #FFFFFF;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
