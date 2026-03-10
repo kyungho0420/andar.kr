@@ -132,3 +132,14 @@ body {
 .damso-card__tag--center {
     align-self: center;
 }
+
+/* [NEW] Map & Promotion Styles */
+.damso-card__map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.andar-promotion-bg {
+    background-image: url('./section/promotion/bg.webp');
+}
