@@ -383,7 +383,7 @@
                 </h2>
                 <p class="damso-section__description" data-lang="section_contact_desc"></p>
 
-                <form class="damso-form damso-contact-form" autocomplete="off" data-demo-mode="true">
+                <form class="damso-form damso-contact-form" autocomplete="off" data-intent="conn.contact">
                     <input type="email" name="email" required class="damso-form__input"
                         data-lang-placeholder="form_placeholder_email" placeholder="Email">
                     <div class="damso-form__textarea-wrapper">
@@ -391,6 +391,10 @@
                             data-lang-placeholder="form_placeholder_msg" placeholder="Message"></textarea>
                     </div>
                     <input type="hidden" name="form" value="andar">
+                    
+                    <!-- Turnstile -->
+                    <div id="turnstile-container"></div>
+                    
                     <button type="submit" class="damso-btn">
                         <span class="damso-form__text" data-lang="btn_submit">보내기</span>
                     </button>
@@ -407,7 +411,7 @@
                 </h2>
                 <p class="damso-section__description" data-lang="section_search_desc"></p>
 
-                <form class="damso-form damso-search-form" autocomplete="off" data-demo-mode="true">
+                <form class="damso-form damso-search-form" autocomplete="off" data-intent="conn.search">
                     <input type="text" name="key" required class="damso-form__input"
                         data-lang-placeholder="form_placeholder_search" placeholder="Search...">
                     <input type="hidden" name="form" value="andar">

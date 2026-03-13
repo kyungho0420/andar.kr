@@ -95,8 +95,7 @@ body {
 }
 
 /* UI Overrides */
-.damso-button,
-.damso-form__submit {
+.damso-btn {
     border-radius: 4px;
     font-weight: 500;
     text-transform: uppercase;
@@ -106,8 +105,7 @@ body {
     border: 1px solid transparent;
 }
 
-.damso-button:hover,
-.damso-form__submit:hover {
+.damso-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }

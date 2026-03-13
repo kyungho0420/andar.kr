@@ -1,5 +1,5 @@
 /* Tier 3: User Custom Style
-    Version: Andar V4.1 (PV4 Refactor)
+    Version: Andar V4.1
     Description: Variable Overrides & Custom Components Only
     Theme: Aroma & Spa (Deep Green & Earthy)
 */
@@ -7,35 +7,32 @@
 /* 1. Variable Overriding */
 :root {
     /* [ANDAR Brand Colors] */
-    --pv-color-primary: #2C3E30;
+    --damso-color-primary: #2C3E30;
     /* Dark Green (Headings/Buttons) */
-    --pv-color-secondary: #5F6F65;
+    --damso-color-secondary: #5F6F65;
     /* Sage Green */
-    --pv-color-accent: #9A8C74;
+    --damso-color-accent: #9A8C74;
     /* Earthy Beige/Gold */
-    --pv-color-bg: #F9F8F6;
+    --damso-color-bg: #F9F8F6;
     /* Off-White */
-    --pv-color-surface: #FFFFFF;
+    --damso-color-surface: #FFFFFF;
     /* White */
-    --pv-color-text: #4A4A4A;
-    /* Dark Grey */
-    --pv-color-border: #E5E0D8;
+    --damso-color-border: #E5E0D8;
     /* Beige Border */
 
     /* Layout */
-    --pv-radius: 12px;
-    --pv-input-height: 52px;
+    --damso-radius: 12px;
+    --damso-input-height: 52px;
 }
 
 [data-theme="dark"] {
-    --pv-color-primary: #809b85;
-    --pv-color-secondary: #A0AFA5;
-    --pv-color-accent: #C5BBA4;
-    --pv-color-bg: #1F1D1B;
-    --pv-color-surface: #2C2A28;
-    --pv-color-text: #D4D2CF;
-    --pv-color-border: #413E3B;
-}
+    --damso-color-primary: #809b85;
+    --damso-color-secondary: #A0AFA5;
+    --damso-color-accent: #C5BBA4;
+    --damso-color-bg: #1F1D1B;
+    --damso-color-surface: #2C2A28;
+    --damso-color-text: #D4D2CF;
+    --damso-color-border: #413E3B;
 }
 
 /* 2. Global Typography Override */
@@ -44,16 +41,16 @@ body {
 }
 
 /* Card Header Override for Clean Look */
-.pv-card__header {
+.damso-card__header {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--pv-color-border);
+    border-bottom: 1px solid var(--damso-color-border);
 }
 
-.pv-card__header h2 {
+.damso-card__header h2 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--pv-color-primary);
+    color: var(--damso-color-primary);
     margin: 0;
 }
 
@@ -61,10 +58,10 @@ body {
 .site-segmented-control {
     display: flex;
     width: 100%;
-    border-radius: var(--pv-radius);
-    border: 1px solid var(--pv-color-border);
+    border-radius: var(--damso-radius);
+    border: 1px solid var(--damso-color-border);
     overflow: hidden;
-    background-color: var(--pv-color-bg);
+    background-color: var(--damso-color-bg);
 }
 
 .site-segmented-control input[type="radio"] {
@@ -77,16 +74,16 @@ body {
 .site-segmented-control label {
     flex: 1;
     padding: 0 1rem;
-    height: var(--pv-input-height);
-    line-height: var(--pv-input-height);
+    height: var(--damso-input-height);
+    line-height: var(--damso-input-height);
     text-align: center;
     cursor: pointer;
     transition: all 0.2s;
-    color: var(--pv-color-text);
+    color: var(--damso-color-text);
     font-weight: 500;
     font-size: 1rem;
-    border-right: 1px solid var(--pv-color-border);
-    background-color: var(--pv-color-bg);
+    border-right: 1px solid var(--damso-color-border);
+    background-color: var(--damso-color-bg);
 }
 
 .site-segmented-control label:last-child {
@@ -94,7 +91,7 @@ body {
 }
 
 .site-segmented-control input[type="radio"]:checked+label {
-    background-color: var(--pv-color-primary);
+    background-color: var(--damso-color-primary);
     color: #FFFFFF;
     font-weight: 600;
 }
@@ -103,13 +100,13 @@ body {
 .site-dynamic-item {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px dashed var(--pv-color-border);
+    border-top: 1px dashed var(--damso-color-border);
 }
 
 .site-dynamic-title {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--pv-color-primary);
+    color: var(--damso-color-primary);
     margin-bottom: 1rem;
     display: block;
 }
@@ -125,3 +122,4 @@ body {
     .site-row-datetime {
         grid-template-columns: 1fr;
     }
+}

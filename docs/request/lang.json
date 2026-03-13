@@ -23,7 +23,8 @@
         "services_02_title": "딥 티슈 릴렉세이션 (Deep Tissue Relaxation)",
         "services_03_title": "세레니티 페이셜 (Serenity Facial)",
         "reservation_datetime": "예약 일시",
-        "additional_requests_title": "추가 요청사항",
+        "additional_requests_title": "추가 요청 사항",
+        "visitor_label": "방문자",
         "submit_button": "예약 신청하기"
     },
     "en": {
@@ -51,6 +52,7 @@
         "services_03_title": "Serenity Facial",
         "reservation_datetime": "Date & Time",
         "additional_requests_title": "Special Requests",
+        "visitor_label": "Visitor",
         "submit_button": "Submit Reservation"
     }
 }

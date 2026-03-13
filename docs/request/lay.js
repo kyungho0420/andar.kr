@@ -70,14 +70,7 @@ function initDateConstraints() {
 function initDynamicVisitors() {
     const radios = document.querySelectorAll('input[name="visitor_count"]');
     const container = document.getElementById('visitor-details-container');
-    const yearOptions = getYearOptions(); // Re-use helper
-
-    const texts = {
-        ko: { item: "방문자", name: "성명", gender: "성별", male: "남", female: "여", birth: "출생년도" },
-        en: { item: "Visitor", name: "Name", gender: "Gender", male: "Male", female: "Female", birth: "Birth Year" }
-    };
-    const lang = (new URLSearchParams(window.location.search).get('lang') === 'en') ? 'en' : 'ko';
-    const t = texts[lang];
+    const yearOptions = getYearOptions();
 
     const update = () => {
         const checked = document.querySelector('input[name="visitor_count"]:checked');
@@ -87,19 +80,29 @@ function initDynamicVisitors() {
         container.innerHTML = '';
 
         if (count > 1) {
+            // Use V4 Data for translations
+            const t = {
+                item: window.V4.Data.get('visitor_label') || 'Visitor',
+                name: window.V4.Data.get('applicant_name') || 'Name',
+                gender: window.V4.Data.get('applicant_gender') || 'Gender',
+                male: window.V4.Data.get('label_male') || 'Male',
+                female: window.V4.Data.get('label_female') || 'Female',
+                birth: window.V4.Data.get('applicant_birth') || 'Birth Year'
+            };
+
             for (let i = 2; i <= count; i++) {
                 const html = `
                 <div class="site-dynamic-item">
                     <span class="site-dynamic-title">${t.item} ${i}</span>
                     
-                    <div class="pv-group">
-                        <label class="pv-label">${t.name}</label>
-                        <input class="pv-input" name="visitors[${i - 1}][name]" type="text" required>
+                    <div class="damso-group">
+                        <label class="damso-label">${t.name}</label>
+                        <input class="damso-input" name="visitors[${i - 1}][name]" type="text" required>
                     </div>
 
                     <div class="site-row-datetime">
-                        <div class="pv-group">
-                            <label class="pv-label">${t.gender}</label>
+                        <div class="damso-group">
+                            <label class="damso-label">${t.gender}</label>
                             <div class="site-segmented-control">
                                 <input type="radio" id="v_gen_m_${i}" name="visitors[${i - 1}][gender]" value="M" checked>
                                 <label for="v_gen_m_${i}">${t.male}</label>
@@ -109,9 +112,9 @@ function initDynamicVisitors() {
                             </div>
                         </div>
 
-                        <div class="pv-group">
-                            <label class="pv-label">${t.birth}</label>
-                            <select class="pv-select" name="visitors[${i - 1}][birth_year]">
+                        <div class="damso-group">
+                            <label class="damso-label">${t.birth}</label>
+                            <select class="damso-select" name="visitors[${i - 1}][birth_year]">
                                 ${yearOptions}
                             </select>
                         </div>
@@ -123,5 +126,10 @@ function initDynamicVisitors() {
     };
 
     radios.forEach(r => r.addEventListener('change', update));
-    update();
-}
+    // V4 initialization is async, so we wait for Data to be ready if needed, 
+    // but typically DOMContentLoaded + V4.init.then is safer.
+    // For now, we rely on the radios change event and initial call.
+    if (window.V4 && window.V4.Data) {
+        update();
+    }
+}
