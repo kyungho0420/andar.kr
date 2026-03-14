@@ -166,39 +166,43 @@ h2::after {
 
 #lang-switcher button.is-active {
     background-color: var(--color-primary);
-    color: var(--color-bg) !important; /* Forces best contrast (Dark on Light / Light on Dark) */
+    color: #FFFFFF !important; /* Pure white for best contrast on dark olive */
     font-weight: 800;
     box-shadow: 0 4px 10px rgba(44, 62, 48, 0.2);
 }
 
-/* Fix Card Spacing & Borders */
+/* Specific Border Recovery */
+.profile-list__item,
+.product-list__item {
+    border-bottom: 1px solid var(--color-border) !important;
+    opacity: 1 !important;
+}
+
+.product-list {
+    padding-bottom: 20px;
+}
+
 .grid {
     display: grid !important;
-    gap: 40px 30px !important; /* Explicit row-gap (40px) */
+    gap: 50px 30px !important; /* Increased row-gap for modular feel */
 }
 
 .card {
+    border: 1px solid var(--card-border) !important;
     outline: none !important;
     margin-bottom: 0 !important;
+    box-shadow: var(--card-shadow) !important;
+    background-color: var(--card-bg) !important;
 }
 
 .card__image-wrapper {
     border-bottom: 1px solid var(--card-border) !important;
 }
 
-/* Specific Border Recovery */
-.profile-list__item {
-    border-bottom: 1px solid var(--card-border) !important;
+/* Force override any inherited borders from core.css */
+.section, .nav, .header {
+    border: none !important;
 }
-
-.product-list__item {
-    border-bottom: 1px solid var(--card-border) !important;
-}
-
-.card, .grid, .section, .nav {
-    border: none;
-}
-.header { border: none !important; }
 
 /* Footer Credit */
 .footer a {
