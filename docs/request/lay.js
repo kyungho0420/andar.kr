@@ -18,13 +18,13 @@ const siteConfig = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.V4) {
-        window.V4.init(siteConfig);
+    if (window.V1) {
+        window.V1.initPage(siteConfig).then(app => {
+            initDateConstraints();
+            initBirthYearOptions();
+            initDynamicVisitors();
+        });
     }
-
-    initDateConstraints();
-    initBirthYearOptions();
-    initDynamicVisitors();
 });
 
 // Helper to generate year options
