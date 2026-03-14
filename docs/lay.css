@@ -22,8 +22,8 @@
     --text-button: #FFFFFF;
 
     --card-bg: #FFFFFF;
-    --card-border: rgba(44, 62, 48, 0.08); /* Subtle border restored */
-    --card-shadow: 0 12px 30px -10px rgba(44, 62, 48, 0.1);
+    --card-border: rgba(44, 62, 48, 0.12); /* Slightly more visible but still silver/subtle */
+    --card-shadow: 0 15px 45px -10px rgba(44, 62, 48, 0.12);
 
     --nav-bg: #FFFFFF;
     --nav-bg-gradient: linear-gradient(135deg, rgba(249, 248, 246, 0.98), rgba(255, 255, 255, 0.98));
@@ -166,15 +166,16 @@ h2::after {
 
 #lang-switcher button.is-active {
     background-color: var(--color-primary);
-    color: #FFFFFF !important; /* Pure white for best contrast on dark olive */
+    color: var(--color-bg) !important; /* Perfect contrast: dark on light bubble, white on dark bubble */
     font-weight: 800;
     box-shadow: 0 4px 10px rgba(44, 62, 48, 0.2);
 }
 
 /* Specific Border Recovery */
 .profile-list__item,
-.product-list__item {
-    border-bottom: 1px solid var(--color-border) !important;
+.product-list__item,
+.faq-item {
+    border-bottom: 2px solid var(--color-border) !important; /* Thicker and more visible lines */
     opacity: 1 !important;
 }
 
@@ -184,7 +185,7 @@ h2::after {
 
 .grid {
     display: grid !important;
-    gap: 50px 30px !important; /* Increased row-gap for modular feel */
+    gap: 60px 40px !important; /* Even more generous row-gap (60px) for spa feel */
 }
 
 .card {
