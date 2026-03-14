@@ -22,8 +22,8 @@
     --text-button: #FFFFFF;
 
     --card-bg: #FFFFFF;
-    --card-border: none; /* Force remove */
-    --card-shadow: 0 10px 40px -10px rgba(44, 62, 48, 0.12);
+    --card-border: rgba(44, 62, 48, 0.08); /* Subtle border restored */
+    --card-shadow: 0 12px 30px -10px rgba(44, 62, 48, 0.1);
 
     --nav-bg: #FFFFFF;
     --nav-bg-gradient: linear-gradient(135deg, rgba(249, 248, 246, 0.98), rgba(255, 255, 255, 0.98));
@@ -109,7 +109,7 @@ h2::after {
 
 /* Minimalist Card Refactor */
 .card {
-    border: none !important;
+    border: 1px solid var(--card-border) !important;
     box-shadow: var(--card-shadow) !important;
 }
 
@@ -166,36 +166,39 @@ h2::after {
 
 #lang-switcher button.is-active {
     background-color: var(--color-primary);
-    color: #FFFFFF;
+    color: var(--color-bg) !important; /* Forces best contrast (Dark on Light / Light on Dark) */
+    font-weight: 800;
     box-shadow: 0 4px 10px rgba(44, 62, 48, 0.2);
 }
 
 /* Fix Card Spacing & Borders */
 .grid {
-    gap: 30px !important; /* Ensure vertical spacing */
+    display: grid !important;
+    gap: 40px 30px !important; /* Explicit row-gap (40px) */
 }
 
 .card {
-    border: none !important;
     outline: none !important;
     margin-bottom: 0 !important;
-    box-shadow: var(--card-shadow) !important;
 }
 
 .card__image-wrapper {
-    border: none !important;
+    border-bottom: 1px solid var(--card-border) !important;
 }
 
-/* Force override any inherited borders from core.css */
-* {
-    border-color: transparent !important;
+/* Specific Border Recovery */
+.profile-list__item {
+    border-bottom: 1px solid var(--card-border) !important;
 }
-input, textarea, button, .modal__content, #lang-switcher {
-    border-color: var(--color-border) !important; /* Restore specific ones */
+
+.product-list__item {
+    border-bottom: 1px solid var(--card-border) !important;
 }
-.card, .grid, .section, .nav, .header {
-    border: none !important;
+
+.card, .grid, .section, .nav {
+    border: none;
 }
+.header { border: none !important; }
 
 /* Footer Credit */
 .footer a {

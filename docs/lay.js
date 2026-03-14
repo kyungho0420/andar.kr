@@ -7,7 +7,7 @@ const siteConfig = {
         type: 'page',
         mode: 'demo',
         lang: 'ko',
-        theme: true,
+        theme: 'auto',
         scroll_smooth: true
     },
     api: {
