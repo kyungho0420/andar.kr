@@ -19,10 +19,10 @@ const siteConfig = {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.V4) {
-        window.V4.init(siteConfig).then(() => {
+        window.V4.init(siteConfig).then(app => {
             initDateConstraints();
             initBirthYearOptions();
-            initDynamicVisitors();
+            initDynamicVisitors(app);
         });
     }
 });
@@ -67,7 +67,7 @@ function initDateConstraints() {
     }
 }
 
-function initDynamicVisitors() {
+function initDynamicVisitors(app) {
     const radios = document.querySelectorAll('input[name="visitor_count"]');
     const container = document.getElementById('visitor-details-container');
     const yearOptions = getYearOptions();
@@ -80,14 +80,14 @@ function initDynamicVisitors() {
         container.innerHTML = '';
 
         if (count > 1) {
-            // Use V4 Data for translations
+            // Use V4 Util for translations
             const t = {
-                item: window.V4.Data.get('visitor_label') || 'Visitor',
-                name: window.V4.Data.get('applicant_name') || 'Name',
-                gender: window.V4.Data.get('applicant_gender') || 'Gender',
-                male: window.V4.Data.get('label_male') || 'Male',
-                female: window.V4.Data.get('label_female') || 'Female',
-                birth: window.V4.Data.get('applicant_birth') || 'Birth Year'
+                item: app.Util.getText('visitor_label'),
+                name: app.Util.getText('applicant_name'),
+                gender: app.Util.getText('applicant_gender'),
+                male: app.Util.getText('label_male'),
+                female: app.Util.getText('label_female'),
+                birth: app.Util.getText('applicant_birth')
             };
 
             for (let i = 2; i <= count; i++) {
@@ -126,10 +126,7 @@ function initDynamicVisitors() {
     };
 
     radios.forEach(r => r.addEventListener('change', update));
-    // V4 initialization is async, so we wait for Data to be ready if needed, 
-    // but typically DOMContentLoaded + V4.init.then is safer.
-    // For now, we rely on the radios change event and initial call.
-    if (window.V4 && window.V4.Data) {
-        update();
-    }
+    
+    // Initial update
+    update();
 }
