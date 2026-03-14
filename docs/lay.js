@@ -3,7 +3,7 @@
  */
 const siteConfig = {
     meta: {
-        framework: 'V4',
+        framework: 'V1',
         type: 'page',
         mode: 'demo',
         lang: 'ko',
@@ -11,8 +11,8 @@ const siteConfig = {
         scroll_smooth: true
     },
     api: {
-        server: 'damso',
-        turnstile: '0x4AAAAAABy-w_A_C6_e0x6H', // Updated for Modal Mode if needed, or keeping current if valid
+        server: 'https://api.dam.so', // Explicit for V1
+        turnstile: '0x4AAAAAABy-w_A_C6_e0x6H',
         redirect: '../'
     },
     canvas: {
@@ -44,11 +44,11 @@ window.fireflyEffect = {
 
     init(container) {
         this.container = container;
-        // V4 Canvas Plug creates .damso-canvas__effect
-        this.canvas = container.querySelector('.damso-canvas__effect');
+        // V1 Canvas Plug creates .canvas__effect
+        this.canvas = container.querySelector('.canvas__effect');
         if (!this.canvas) {
             this.canvas = document.createElement('canvas');
-            this.canvas.className = 'damso-canvas__effect';
+            this.canvas.className = 'canvas__effect';
             container.appendChild(this.canvas);
         }
         this.ctx = this.canvas.getContext('2d');
@@ -118,8 +118,8 @@ window.fireflyEffect = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.V4) {
-        window.V4.init(siteConfig).then(app => {
+    if (window.V1) {
+        window.V1.initPage(siteConfig).then(app => {
             app.registerEffect('fireflyEffect', window.fireflyEffect);
         });
     }

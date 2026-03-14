@@ -1,32 +1,32 @@
 /*
-    Version: V4
-    Last Modified: 2026-01-14
+    Version: V1
+    Last Modified: 2026-03-14
     File Name: lay.css
     Theme: ANDAR - Aroma & Spa (Deep Green & Earthy)
 */
 
 :root {
     /* [ANDAR Brand Colors] */
-    --damso-color-primary: #2C3E30;
+    --color-primary: #2C3E30;
     /* Dark Green (Headings) */
-    --damso-color-secondary: #5F6F65;
+    --color-secondary: #5F6F65;
     /* Sage Green (Subtitles) */
-    --damso-color-accent: #9A8C74;
+    --color-accent: #9A8C74;
     /* Earthy Beige/Gold (Buttons/Links) */
-    --damso-color-bg: #F9F8F6;
+    --color-bg: #F9F8F6;
     /* Off-White (Background) */
-    --damso-color-surface: #FFFFFF;
+    --color-surface: #FFFFFF;
     /* White (Card BG) */
-    --damso-color-text: #4A4A4A;
+    --color-text: #4A4A4A;
     /* Dark Grey (Body Text) */
     /* Beige Border */
-    --damso-card-border: #E5E0D8;
+    --card-border: #E5E0D8;
 
     /* [UI Overrides] */
     --bg-navbar-animated: linear-gradient(135deg, rgba(249, 248, 246, 0.95), rgba(255, 255, 255, 0.95));
     --bg-card: #FFFFFF;
-    --damso-bg-button: #2C3E30;
-    --damso-bg-button-hover: #3E5244;
+    --bg-button: #2C3E30;
+    --bg-button-hover: #3E5244;
 
     --bg-lang-switcher: #E5E0D8;
     --bg-lang-switcher-hover: #D6D0C5;
@@ -42,7 +42,7 @@
     --text-navbar: #2C3E30;
     --text-lang-switcher: #5F6F65;
     --text-lang-switcher-active: #FFFFFF;
-    --damso-text-button: #FFFFFF;
+    --text-button: #FFFFFF;
     --text-section-title-icon: #9A8C74;
     --text-header-title: #FFFFFF;
     --text-header-description: #F0F0F0;
@@ -56,17 +56,17 @@
 }
 
 [data-theme="dark"] {
-    --damso-color-primary: #E0E5E1;
-    --damso-color-secondary: #A0AFA5;
-    --damso-color-accent: #C5BBA4;
-    --damso-color-bg: #1A1F1C;
-    --damso-color-surface: #252B27;
-    --damso-color-text: #D0D0D0;
-    --damso-color-text-light: #AAAAAA;
-    --damso-color-border: #3A423D;
+    --color-primary: #E0E5E1;
+    --color-secondary: #A0AFA5;
+    --color-accent: #C5BBA4;
+    --color-bg: #1A1F1C;
+    --color-surface: #252B27;
+    --color-text: #D0D0D0;
+    --color-text-light: #AAAAAA;
+    --color-border: #3A423D;
 
-    --damso-bg-button: #A0AFA5;
-    --damso-card-border: #3A423D;
+    --bg-button: #A0AFA5;
+    --card-border: #3A423D;
 }
 
 /* Typography & Layout Overrides */
@@ -76,7 +76,7 @@ body {
 }
 
 /* Fonts: Logos only get custom font */
-.damso-header__title {
+.header__title {
     font-family: 'Cormorant Garamond', serif !important;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -85,17 +85,17 @@ body {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.damso-header__description {
+.header__description {
     font-weight: 300;
     letter-spacing: 1px;
 }
 
-.damso-nav__logo {
+.nav__logo {
     letter-spacing: 2px;
 }
 
 /* UI Overrides */
-.damso-btn {
+.btn {
     border-radius: 4px;
     font-weight: 500;
     text-transform: uppercase;
@@ -105,7 +105,7 @@ body {
     border: 1px solid transparent;
 }
 
-.damso-btn:hover {
+.btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -127,12 +127,12 @@ body {
     display: block;
 }
 
-.damso-card__tag--center {
+.card__tag--center {
     align-self: center;
 }
 
 /* [NEW] Map & Promotion Styles */
-.damso-card__map {
+.card__map {
     width: 100%;
     height: 450px;
     border: 0;
