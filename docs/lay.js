@@ -11,7 +11,8 @@ const siteConfig = {
         scroll_smooth: true
     },
     api: {
-        server: 'https://api.dam.so', // Explicit for V1
+        server: 'damso', 
+        base_url: 'https://api.dam.so',
         turnstile: '0x4AAAAAABy-w_A_C6_e0x6H',
         redirect: '../'
     },
