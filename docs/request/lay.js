@@ -3,7 +3,7 @@
  */
 const siteConfig = {
     meta: {
-        framework: 'V4',
+        framework: 'V1',
         type: 'form',
         mode: 'demo',
         lang: 'ko',
@@ -11,10 +11,10 @@ const siteConfig = {
     },
     api: {
         server: 'damso',
-        turnstile: '0x4AAAAAABrG4DQP8tkp1_TI',
+        base_url: 'https://api.dam.so',
+        turnstile: '0x4AAAAAABy-w_A_C6_e0x6H',
         redirect: '../'
-    },
-    allowed_extensions: ['jpg', 'png', 'webp', 'zip', 'pdf', 'xlsx']
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,14 +80,14 @@ function initDynamicVisitors() {
         container.innerHTML = '';
 
         if (count > 1) {
-            // Use V4 Data for translations
+            // Use V1 Data for translations
             const t = {
-                item: window.V4.Data.get('visitor_label') || 'Visitor',
-                name: window.V4.Data.get('applicant_name') || 'Name',
-                gender: window.V4.Data.get('applicant_gender') || 'Gender',
-                male: window.V4.Data.get('label_male') || 'Male',
-                female: window.V4.Data.get('label_female') || 'Female',
-                birth: window.V4.Data.get('applicant_birth') || 'Birth Year'
+                item: window.V1.Core.Util.getText('visitor_label') || 'Visitor',
+                name: window.V1.Core.Util.getText('applicant_name') || 'Name',
+                gender: window.V1.Core.Util.getText('applicant_gender') || 'Gender',
+                male: window.V1.Core.Util.getText('label_male') || 'Male',
+                female: window.V1.Core.Util.getText('label_female') || 'Female',
+                birth: window.V1.Core.Util.getText('applicant_birth') || 'Birth Year'
             };
 
             for (let i = 2; i <= count; i++) {
