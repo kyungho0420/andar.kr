@@ -19,12 +19,12 @@ const siteConfig = {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.V4) {
-        window.V4.init(siteConfig);
+        window.V4.init(siteConfig).then(() => {
+            initDateConstraints();
+            initBirthYearOptions();
+            initDynamicVisitors();
+        });
     }
-
-    initDateConstraints();
-    initBirthYearOptions();
-    initDynamicVisitors();
 });
 
 // Helper to generate year options
