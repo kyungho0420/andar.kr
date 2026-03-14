@@ -10,25 +10,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
-    <title data-i18n="home_title">Andar Aroma Spa</title>
+    <title data-lang="home_title">Andar Aroma Spa</title>
 
     <meta property="og:image" content="https://www.andar.kr/section/home/1.jpg">
     <link rel="icon" href="https://www.andar.kr/images/favicon.ico">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- [Tier 1] Damso Core (V1) -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/ex/v1/core.css?v=20260314_v2">
-    <script src="https://cdn.dam.so/_inc/ex/v1/core.js?v=20260314_v2"></script>
+    <!-- [Tier 1] Damso Core -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/ex/v4/core/core.css">
+    <script src="https://cdn.dam.so/_inc/ex/v4/core/core.js"></script>
 
-    <!-- [Tier 2] Damso View: Form (V1) -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/ex/v1/view/form.css?v=20260314_v2">
-    <script src="https://cdn.dam.so/_inc/ex/v1/view/form.js?v=20260314_v2"></script>
+    <!-- [Tier 2] Damso View: Form -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/ex/v4/view/form.css">
+    <script src="https://cdn.dam.so/_inc/ex/v4/view/form.js"></script>
 
     <!-- [Tier 3] User Custom -->
-    <link rel="stylesheet" href="./lay.css?v=20260314_v2">
-    <script src="./lay.js?v=20260314_v2" defer></script>
+    <link rel="stylesheet" href="./lay.css">
+    <script src="./lay.js" defer></script>
 </head>
 
 <body>
@@ -36,8 +35,8 @@
     <div class="damso-app">
         <div class="damso-container">
             <header class="damso-header">
-                <h1 class="damso-header__title" data-i18n="home_title"></h1>
-                <p class="damso-header__description" data-i18n="home_description"></p>
+                <h1 class="damso-header__title" data-lang="home_title"></h1>
+                <p class="damso-header__description" data-lang="home_description"></p>
 
                 <nav class="damso-lang-switcher">
                     <a href="?lang=ko" class="damso-lang-btn">KO</a>
@@ -51,33 +50,33 @@
                 <!-- 1. Applicant Info -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-i18n="applicant_info_title"></h2>
+                        <h2 data-lang="applicant_info_title"></h2>
                     </div>
 
                     <div class="damso-group">
-                        <label class="damso-label" for="applicant_name" data-i18n="applicant_name"></label>
+                        <label class="damso-label" for="applicant_name" data-lang="applicant_name"></label>
                         <input class="damso-input" id="applicant_name" name="applicant_name" type="text" required>
                     </div>
                     <div class="damso-group">
-                        <label class="damso-label" for="applicant_contact" data-i18n="applicant_contact"></label>
+                        <label class="damso-label" for="applicant_contact" data-lang="applicant_contact"></label>
                         <input class="damso-input" id="applicant_contact" name="applicant_contact" type="tel" required>
                     </div>
 
                     <!-- Gender & Birth -->
                     <div class="site-row-datetime">
                         <div class="damso-group">
-                            <label class="damso-label" data-i18n="applicant_gender">성별</label>
+                            <label class="damso-label" data-lang="applicant_gender">성별</label>
                             <div class="site-segmented-control">
                                 <input type="radio" id="app_gen_m" name="applicant_gender" value="M" checked>
-                                <label for="app_gen_m" data-i18n="label_male">남</label>
+                                <label for="app_gen_m" data-lang="label_male">남</label>
 
                                 <input type="radio" id="app_gen_f" name="applicant_gender" value="F">
-                                <label for="app_gen_f" data-i18n="label_female">여</label>
+                                <label for="app_gen_f" data-lang="label_female">여</label>
                             </div>
                         </div>
 
                         <div class="damso-group">
-                            <label class="damso-label" data-i18n="applicant_birth">출생년도</label>
+                            <label class="damso-label" data-lang="applicant_birth">출생년도</label>
                             <select class="damso-select js-birth-year" name="applicant_birth_year">
                                 <!-- Options populated by lay.js -->
                             </select>
@@ -88,22 +87,22 @@
                 <!-- 2. Visitor Info -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-i18n="visitor_info_title"></h2>
+                        <h2 data-lang="visitor_info_title"></h2>
                     </div>
 
                     <div class="damso-group">
-                        <label class="damso-label" data-i18n="visitor_count"></label>
+                        <label class="damso-label" data-lang="visitor_count"></label>
                         <div class="site-segmented-control">
                             <input type="radio" id="visitor_count_1" name="visitor_count" value="1" checked>
-                            <label for="visitor_count_1" data-i18n="visitor_count_one"></label>
+                            <label for="visitor_count_1" data-lang="visitor_count_one"></label>
 
                             <input type="radio" id="visitor_count_2" name="visitor_count" value="2">
-                            <label for="visitor_count_2" data-i18n="visitor_count_two"></label>
+                            <label for="visitor_count_2" data-lang="visitor_count_two"></label>
 
                             <input type="radio" id="visitor_count_3" name="visitor_count" value="3">
-                            <label for="visitor_count_3" data-i18n="visitor_count_three"></label>
+                            <label for="visitor_count_3" data-lang="visitor_count_three"></label>
                         </div>
-                        <p class="damso-note" data-i18n="visitor_note"></p>
+                        <p class="damso-note" data-lang="visitor_note"></p>
                     </div>
 
                     <div id="visitor-details-container"></div>
@@ -112,23 +111,23 @@
                 <!-- 3. Service Selection -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-i18n="service_selection_title"></h2>
+                        <h2 data-lang="service_selection_title"></h2>
                     </div>
 
-                    <p class="damso-note" style="margin-top:-0.5rem; margin-bottom:1.5rem;" data-i18n="services_desc"></p>
+                    <p class="damso-note" style="margin-top:-0.5rem; margin-bottom:1.5rem;" data-lang="services_desc"></p>
 
                     <div class="damso-group">
-                        <label class="damso-label" data-i18n="program"></label>
+                        <label class="damso-label" data-lang="program"></label>
                         <select name="service" id="service" class="damso-select" required>
-                            <option value="" data-i18n="program_select"></option>
-                            <option value="aroma_signature" data-i18n="services_01_title"></option>
-                            <option value="deep_tissue" data-i18n="services_02_title"></option>
-                            <option value="serenity_facial" data-i18n="services_03_title"></option>
+                            <option value="" data-lang="program_select"></option>
+                            <option value="aroma_signature" data-lang="services_01_title"></option>
+                            <option value="deep_tissue" data-lang="services_02_title"></option>
+                            <option value="serenity_facial" data-lang="services_03_title"></option>
                         </select>
                     </div>
 
                     <div class="damso-group">
-                        <label class="damso-label" data-i18n="reservation_datetime"></label>
+                        <label class="damso-label" data-lang="reservation_datetime"></label>
                         <div class="site-row-datetime">
                             <div class="date-time-wrapper">
                                 <input class="damso-input" id="reservation_date" name="reservation_date" type="date"
@@ -154,7 +153,7 @@
                 <!-- 4. Additional Requests -->
                 <div class="damso-card">
                     <div class="damso-card__header">
-                        <h2 data-i18n="additional_requests_title"></h2>
+                        <h2 data-lang="additional_requests_title"></h2>
                     </div>
                     <textarea class="damso-textarea" name="requests" rows="5"></textarea>
                 </div>
@@ -165,7 +164,7 @@
                 <!-- Submit -->
                 <div class="damso-submit-area">
                     <button type="submit" class="damso-btn damso-btn--submit damso-btn--full" id="submit-btn">
-                        <span class="submit-btn-text" data-i18n="submit_button"></span>
+                        <span class="submit-btn-text" data-lang="submit_button"></span>
                     </button>
                 </div>
             </form>

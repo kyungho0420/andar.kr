@@ -1,213 +1,143 @@
 /*
-    Version: V1.1 (Premium Color Correction)
-    Last Modified: 2026-03-14
+    Version: V4
+    Last Modified: 2026-01-14
     File Name: lay.css
     Theme: ANDAR - Aroma & Spa (Deep Green & Earthy)
 */
 
 :root {
-    /* [ANDAR Brand Colors - Corrected for V1] */
-    --color-primary: #2C3E30;    /* Dark Green (Headings/Core) */
-    --color-secondary: #5F6F65;  /* Sage Green (Subtitles/Text) */
-    --color-accent: #9A8C74;     /* Earthy Beige/Gold (Accents/Icons/Badges) */
-    --color-bg: #F9F8F6;         /* Off-White (Base Background) */
-    --color-surface: #F1EFEA;    /* Light Beige (Section Alternates/Cards) */
-    --color-text: #4A4A4A;       /* Dark Grey (Body Language) */
-    --color-text-light: #888888;
-    --color-border: #E5E0D8;
+    /* [ANDAR Brand Colors] */
+    --damso-color-primary: #2C3E30;
+    /* Dark Green (Headings) */
+    --damso-color-secondary: #5F6F65;
+    /* Sage Green (Subtitles) */
+    --damso-color-accent: #9A8C74;
+    /* Earthy Beige/Gold (Buttons/Links) */
+    --damso-color-bg: #F9F8F6;
+    /* Off-White (Background) */
+    --damso-color-surface: #FFFFFF;
+    /* White (Card BG) */
+    --damso-color-text: #4A4A4A;
+    /* Dark Grey (Body Text) */
+    /* Beige Border */
+    --damso-card-border: #E5E0D8;
 
-    /* [Express V1 Component Mapping] */
-    --bg-button: #2C3E30;
-    --bg-button-hover: #3E5244;
-    --text-button: #FFFFFF;
+    /* [UI Overrides] */
+    --bg-navbar-animated: linear-gradient(135deg, rgba(249, 248, 246, 0.95), rgba(255, 255, 255, 0.95));
+    --bg-card: #FFFFFF;
+    --damso-bg-button: #2C3E30;
+    --damso-bg-button-hover: #3E5244;
 
-    --card-bg: #FFFFFF;
-    --card-border: rgba(44, 62, 48, 0.12); /* Slightly more visible but still silver/subtle */
-    --card-shadow: 0 15px 45px -10px rgba(44, 62, 48, 0.12);
+    --bg-lang-switcher: #E5E0D8;
+    --bg-lang-switcher-hover: #D6D0C5;
+    --bg-lang-switcher-active: #2C3E30;
 
-    --nav-bg: #FFFFFF;
-    --nav-bg-gradient: linear-gradient(135deg, rgba(249, 248, 246, 0.98), rgba(255, 255, 255, 0.98));
-    --nav-text: #2C3E30;
-    --nav-border: none;
+    --bg-offer-badge: #9A8C74;
+    --bg-overlay: rgba(93, 64, 55, 0.05);
 
-    --footer-bg: #2C3E30;
-    --footer-text: #E5E0D8;
+    --text-headings: #2C3E30;
+    --text-secondary: #5F6F65;
+    --text-accent: #9A8C74;
 
-    --badge-bg: #9A8C74;
-    --badge-text: #FFFFFF;
+    --text-navbar: #2C3E30;
+    --text-lang-switcher: #5F6F65;
+    --text-lang-switcher-active: #FFFFFF;
+    --damso-text-button: #FFFFFF;
+    --text-section-title-icon: #9A8C74;
+    --text-header-title: #FFFFFF;
+    --text-header-description: #F0F0F0;
+    --text-footer: #888888;
+    --text-offer-badge: #FFFFFF;
 
-    --overlay-bg: rgba(44, 62, 48, 0.5); 
+    --bg-footer: #2C3E30;
+    --border-card: #E5E0D8;
+    --border-navbar-bottom: rgba(44, 62, 48, 0.1);
+    --border-section-heading-underline: #9A8C74;
 }
 
 [data-theme="dark"] {
-    --color-primary: #E0E5E1;
-    --color-secondary: #A0AFA5;
-    --color-accent: #C5BBA4;
-    --color-bg: #1A1F1C;
-    --color-surface: #252B27;
-    --color-text: #D0D0D0;
-    --color-text-light: #AAAAAA;
-    --color-border: #3A423D;
+    --damso-color-primary: #E0E5E1;
+    --damso-color-secondary: #A0AFA5;
+    --damso-color-accent: #C5BBA4;
+    --damso-color-bg: #1A1F1C;
+    --damso-color-surface: #252B27;
+    --damso-color-text: #D0D0D0;
+    --damso-color-text-light: #AAAAAA;
+    --damso-color-border: #3A423D;
 
-    --bg-button: #A0AFA5;
-    --footer-bg: #121212;
-    --card-bg: #252B27;
+    --damso-bg-button: #A0AFA5;
+    --damso-card-border: #3A423D;
 }
 
-/* --- Global & Layout Refinements --- */
+/* Typography & Layout Overrides */
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--color-bg);
+    font-weight: 400;
 }
 
-/* Header Refinement (Force Contrast) */
-.header {
-    background-color: #2C3E30; /* Fallback brand color */
-    color: #FFFFFF;
-}
-
-.header__title {
+/* Fonts: Logos only get custom font */
+.damso-header__title {
     font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.15em !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: clamp(3rem, 2rem + 6vw, 6rem) !important;
-    color: #FFFFFF !important;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+    font-size: clamp(3rem, 2rem + 6vw, 6rem);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.header__description {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 300 !important;
-    letter-spacing: 2px !important;
-    color: rgba(255, 255, 255, 0.8) !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* Section Contrast */
-.section {
-    background-color: var(--color-bg);
-}
-
-.section:nth-of-type(even) {
-    background-color: var(--color-surface); /* Gentle beige contrast */
-}
-
-/* Typography Overrides */
-h2 {
-    color: var(--color-primary);
-}
-
-h2 .material-symbols-outlined {
-    color: var(--color-accent) !important;
-}
-
-h2::after {
-    background: var(--color-accent) !important;
-    opacity: 0.6;
-}
-
-/* Minimalist Card Refactor */
-.card {
-    border: 1px solid var(--card-border) !important;
-    box-shadow: var(--card-shadow) !important;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px -10px rgba(44, 62, 48, 0.15) !important;
-}
-
-/* UI Components */
-.btn {
-    border-radius: 4px;
-    font-weight: 600;
+.damso-header__description {
+    font-weight: 300;
     letter-spacing: 1px;
-    padding: 18px 45px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 15px rgba(44, 62, 48, 0.2);
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(44, 62, 48, 0.3);
+.damso-nav__logo {
+    letter-spacing: 2px;
 }
 
-/* Extra for ANDAR */
+/* UI Overrides */
+.damso-btn {
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 40px;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.damso-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* [Extracted Styles] */
+.andar-interview-grid {
+    margin-bottom: 30px;
+}
+
 .andar-video-wrapper {
-    background-color: #000;
-    border-radius: 12px;
-    overflow: hidden;
+    height: auto;
+    min-height: 300px;
+}
+
+.andar-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.damso-card__tag--center {
+    align-self: center;
+}
+
+/* [NEW] Map & Promotion Styles */
+.damso-card__map {
+    width: 100%;
+    height: 450px;
+    border: 0;
 }
 
 .andar-promotion-bg {
     background-image: url('./section/promotion/bg.webp');
-    filter: brightness(0.7);
-}
-
-/* Language Switcher Adjustment - Minimalist Style */
-#lang-switcher {
-    border: none;
-    background-color: var(--color-surface);
-    border-radius: 50px;
-    padding: 4px;
-    display: flex;
-    gap: 2px;
-}
-
-#lang-switcher button {
-    border-radius: 50px;
-    padding: 6px 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--color-text-light);
-    transition: all 0.3s ease;
-}
-
-#lang-switcher button.is-active {
-    background-color: var(--color-primary);
-    color: var(--color-bg) !important; /* Perfect contrast: dark on light bubble, white on dark bubble */
-    font-weight: 800;
-    box-shadow: 0 4px 10px rgba(44, 62, 48, 0.2);
-}
-
-/* Specific Border Recovery */
-.profile-list__item,
-.product-list__item,
-.faq-item {
-    border-bottom: 2px solid var(--color-border) !important; /* Thicker and more visible lines */
-    opacity: 1 !important;
-}
-
-.product-list {
-    padding-bottom: 20px;
-}
-
-.grid {
-    display: grid !important;
-    gap: 60px 40px !important; /* Even more generous row-gap (60px) for spa feel */
-}
-
-.card {
-    border: 1px solid var(--card-border) !important;
-    outline: none !important;
-    margin-bottom: 0 !important;
-    box-shadow: var(--card-shadow) !important;
-    background-color: var(--card-bg) !important;
-}
-
-.card__image-wrapper {
-    border-bottom: 1px solid var(--card-border) !important;
-}
-
-/* Force override any inherited borders from core.css */
-.section, .nav, .header {
-    border: none !important;
-}
-
-/* Footer Credit */
-.footer a {
-    color: var(--color-accent);
-    text-decoration: none;
-    font-weight: 500;
 }
