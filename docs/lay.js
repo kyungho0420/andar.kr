@@ -12,7 +12,6 @@ const siteConfig = {
     },
     api: {
         server: 'damso',
-        turnstile: '0x4AAAAAABy-w_A_C6_e0x6H', // Updated for Modal Mode if needed, or keeping current if valid
         redirect: '../'
     },
     canvas: {
