@@ -31,11 +31,6 @@
 </head>
 
 <body>
-    <a href="/" class="site-home-link">
-        <span class="material-symbols-outlined">home</span>
-        <span>HOME</span>
-    </a>
-
     <div class="damso-app">
         <div class="damso-container">
             <header class="damso-header">
@@ -58,12 +53,16 @@
                     </div>
 
                     <div class="damso-group">
-                        <label class="damso-label" for="applicant_name" data-lang="applicant_name"></label>
-                        <input class="damso-input" id="applicant_name" name="applicant_name" type="text" required>
+                        <label class="damso-label" for="name" data-lang="applicant_name"></label>
+                        <input class="damso-input" id="name" name="name" type="text" required>
                     </div>
                     <div class="damso-group">
-                        <label class="damso-label" for="applicant_contact" data-lang="applicant_contact"></label>
-                        <input class="damso-input" id="applicant_contact" name="applicant_contact" type="tel" required>
+                        <label class="damso-label" for="phone" data-lang="applicant_contact"></label>
+                        <input class="damso-input" id="phone" name="phone" type="tel" required>
+                    </div>
+                    <div class="damso-group">
+                        <label class="damso-label" for="email" data-lang="form_label_email">이메일</label>
+                        <input class="damso-input" id="email" name="email" type="email" required>
                     </div>
 
                     <!-- Gender & Birth -->

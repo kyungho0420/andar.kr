@@ -10,7 +10,7 @@ const siteConfig = {
         theme: true
     },
     api: {
-        server: 'damso',
+        server: 'provider',
         redirect: '../'
     },
     allowed_extensions: ['jpg', 'png', 'webp', 'zip', 'pdf', 'xlsx']

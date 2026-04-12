@@ -11,7 +11,7 @@ const siteConfig = {
         scroll_smooth: true
     },
     api: {
-        server: 'damso',
+        server: 'provider',
         redirect: '../'
     },
     canvas: {
