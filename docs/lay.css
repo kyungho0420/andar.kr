@@ -84,7 +84,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-size: clamp(3rem, 2rem + 6vw, 6rem);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .damso-header__description {
@@ -108,8 +108,8 @@ body {
 }
 
 .damso-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--damso-bg-button-hover);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* [Extracted Styles] */
