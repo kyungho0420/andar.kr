@@ -55,12 +55,10 @@ window.fireflyEffect = {
         this.ctx = this.canvas.getContext('2d');
 
         this.resize = this.resize.bind(this);
-        this.animate = this.animate.bind(this);
 
         window.addEventListener('resize', this.resize);
         this.resize();
         this.createFlies();
-        this.animate();
     },
 
     resize() {
@@ -87,7 +85,7 @@ window.fireflyEffect = {
         }
     },
 
-    animate() {
+    draw() {
         if (!this.ctx) return;
         this.ctx.clearRect(0, 0, this.width, this.height);
 
@@ -113,8 +111,6 @@ window.fireflyEffect = {
             this.ctx.fillStyle = `rgba(255, 255, 200, ${fly.alpha})`; // Warm soft yellow
             this.ctx.fill();
         });
-
-        this.animationFrameId = requestAnimationFrame(this.animate);
     }
 };
 
