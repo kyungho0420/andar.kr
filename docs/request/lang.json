@@ -1,7 +1,11 @@
 {
+    "_default": {
+        "home_title": "Andar Aroma Spa Reservation",
+        "home_description": "Experience true relaxation in the city at Andar Spa."
+    },
     "ko": {
-        "home_title": "Andar 아로마 스파 예약",
-        "home_description": "도심 속 온전한 휴식, 안다르 스파에서 경험하세요.",
+        "meta_title": "안다르 아로마 스파 예약",
+        "meta_description": "도심 속 온전한 휴식, 안다르 스파 예약 시스템입니다.",
         "applicant_info_title": "신청자 정보",
         "applicant_name": "성명",
         "applicant_contact": "연락처",
@@ -28,8 +32,8 @@
         "submit_button": "예약 신청하기"
     },
     "en": {
-        "home_title": "Andar Aroma Spa Reservation",
-        "home_description": "Experience true relaxation in the city at Andar Spa.",
+        "meta_title": "Andar Aroma Spa Reservation",
+        "meta_description": "Andar Aroma Spa official reservation system.",
         "applicant_info_title": "Applicant Info",
         "applicant_name": "Full Name",
         "applicant_contact": "Contact Number",
