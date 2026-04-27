@@ -17,6 +17,7 @@ const siteConfig = {
         redirect: '../'
     },
     canvas: {
+        id: 'home',
         target: '#home',
         effect: 'fireflyEffect',
         overlay: 'dotted',

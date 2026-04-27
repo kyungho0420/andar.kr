@@ -78,7 +78,7 @@ body {
 }
 
 /* Fonts: Logos only get custom font */
-.damso-header__title {
+.brand-logo {
     font-family: 'Cormorant Garamond', serif !important;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -87,7 +87,7 @@ body {
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.damso-header__description {
+.brand-slogan {
     font-weight: 300;
     letter-spacing: 1px;
 }
