@@ -153,25 +153,6 @@ body {
     transition: all 0.2s ease;
 }
 
-.damso-lang-btn:hover {
-    color: var(--damso-color-primary);
-    background-color: var(--damso-color-bg);
-}
-
-.damso-lang-btn.active {
-    background-color: var(--damso-color-primary);
-    color: #FFFFFF !important;
-}
-
-[data-theme="dark"] .damso-lang-btn.active {
-    color: #000000 !important;
-}
-
-.damso-card {
-    border-radius: var(--damso-radius);
-    border: 1px solid var(--damso-card-border);
-}
-
 /* [NEW] Map & Promotion Styles */
 .damso-card__map {
     width: 100%;
