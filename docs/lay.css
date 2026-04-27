@@ -23,36 +23,38 @@
     --damso-card-border: #E5E0D8;
 
     /* [UI Overrides] */
-    --bg-navbar-animated: linear-gradient(135deg, rgba(249, 248, 246, 0.95), rgba(255, 255, 255, 0.95));
-    --bg-card: #FFFFFF;
-    --damso-bg-button: #2C3E30;
-    --damso-bg-button-hover: #3E5244;
+    --damso-nav-bg-image: linear-gradient(135deg, rgba(249, 248, 246, 0.95), rgba(255, 255, 255, 0.95));
+    --damso-card-color-bg: #FFFFFF;
+    --damso-btn-color-bg: #2C3E30;
+    --damso-btn-color-bg-hover: #3E5244;
 
-    --bg-lang-switcher: #E5E0D8;
-    --bg-lang-switcher-hover: #D6D0C5;
-    --bg-lang-switcher-active: #2C3E30;
+    --damso-canvas-btn-color-icon-hover: var(--damso-btn-color-bg-hover);
 
-    --bg-offer-badge: #9A8C74;
-    --bg-overlay: rgba(93, 64, 55, 0.05);
+    --damso-lang-color-bg: #E5E0D8;
+    --damso-lang-color-bg-hover: #D6D0C5;
+    --damso-lang-color-bg-active: #2C3E30;
 
-    --text-headings: #2C3E30;
-    --text-secondary: #5F6F65;
-    --text-accent: #9A8C74;
+    --damso-offer-color-bg: #9A8C74;
+    --damso-overlay-color-bg: rgba(93, 64, 55, 0.05);
 
-    --text-navbar: #2C3E30;
-    --text-lang-switcher: #5F6F65;
-    --text-lang-switcher-active: #FFFFFF;
-    --damso-text-button: #FFFFFF;
-    --text-section-title-icon: #9A8C74;
-    --text-header-title: #FFFFFF;
-    --text-header-description: #F0F0F0;
-    --text-footer: #888888;
-    --text-offer-badge: #FFFFFF;
+    --damso-heading-color-text: #2C3E30;
+    --damso-text-color-secondary: #5F6F65;
+    --damso-text-color-accent: #9A8C74;
 
-    --bg-footer: #2C3E30;
-    --border-card: #E5E0D8;
-    --border-navbar-bottom: rgba(44, 62, 48, 0.1);
-    --border-section-heading-underline: #9A8C74;
+    --damso-nav-color-text: #2C3E30;
+    --damso-lang-color-text: #5F6F65;
+    --damso-lang-color-text-active: #FFFFFF;
+    --damso-btn-color-text: #FFFFFF;
+    --damso-section-title-color-icon: #9A8C74;
+    --damso-header-color-title: #FFFFFF;
+    --damso-header-color-description: #F0F0F0;
+    --damso-footer-color-text: #888888;
+    --damso-offer-color-text: #FFFFFF;
+
+    --damso-footer-color-bg: #2C3E30;
+    --damso-card-color-border: #E5E0D8;
+    --damso-nav-color-border-bottom: rgba(44, 62, 48, 0.1);
+    --damso-section-heading-color-underline: #9A8C74;
     --damso-radius: 12px;
 }
 
@@ -66,8 +68,8 @@
     --damso-color-text-light: #AAAAAA;
     --damso-color-border: #3A423D;
 
-    --damso-bg-button: #A0AFA5;
-    --damso-card-border: #3A423D;
+    --damso-btn-color-bg: #A0AFA5;
+    --damso-card-color-border: #3A423D;
     --damso-radius: 12px;
 }
 
@@ -108,7 +110,7 @@ body {
 }
 
 .damso-btn:hover {
-    background-color: var(--damso-bg-button-hover);
+    background-color: var(--damso-btn-color-bg-hover);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
