@@ -68,8 +68,27 @@
     --damso-color-text-light: #AAAAAA;
     --damso-color-border: #3A423D;
 
-    --damso-btn-color-bg: #A0AFA5;
+    /* Dark Mode UI Overrides */
+    --damso-nav-bg-image: linear-gradient(135deg, rgba(26, 31, 28, 0.95), rgba(37, 43, 39, 0.95));
+    --damso-nav-color-text: var(--damso-color-primary);
+    --damso-nav-color-border-bottom: rgba(224, 229, 225, 0.1);
+
+    --damso-footer-color-bg: #111512;
+    --damso-footer-color-text: var(--damso-color-text-light);
+
+    --damso-card-color-bg: var(--damso-color-surface);
     --damso-card-color-border: #3A423D;
+
+    --damso-btn-color-bg: #5F6F65;
+    --damso-btn-color-bg-hover: #728479;
+    --damso-btn-color-text: #FFFFFF;
+
+    --damso-lang-color-bg: #252B27;
+    --damso-lang-color-bg-hover: #3A423D;
+    --damso-lang-color-bg-active: var(--damso-color-primary);
+    --damso-lang-color-text: var(--damso-color-secondary);
+    --damso-lang-color-text-active: #111512;
+
     --damso-radius: 12px;
 }
 
